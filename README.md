@@ -2,7 +2,7 @@
 Q1 of Assignment 3 of COMP 3005 course
 
 JAVA:
-Provided main.java file can be compiled and run on any system that has java version-20 or above installed.
+Provided main.java file can be compiled and run on any system that has java version-20 or above installed. Mavin dependencies for psqlJDBC driver will be required.
 Note - url, username and password variables are required to be changed based on the postgres connection port and the username/password combination used.
 
 DBMS:
