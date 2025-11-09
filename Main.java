@@ -14,7 +14,10 @@ public class Main {
 
     public static void main(String[] args) {
         getAllStudents();
-
+        //addStudent("Jay", "Jonah","jayjonah@example.com","2023-09-03");
+        //deleteStudent(4);
+        //updateStudentEmail(3, "jayjay@example.com");
+        //getAllStudents();
     }
 
     //Function to view all students
@@ -52,6 +55,7 @@ public class Main {
             LocalDate date = LocalDate.parse(enrollment_date);
             String query = String.format("INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES ('%s', '%s', '%s', '%tF');", first_name, last_name, email, date);
             statement.executeUpdate(query);
+            System.out.println("Student added successfully!");
         }
         catch (Exception e){
             System.out.println(e);
@@ -66,6 +70,7 @@ public class Main {
             Statement statement = connection.createStatement();
             String query = String.format("UPDATE students SET email = '%s' WHERE student_id = %d;", new_email,student_id);
             statement.executeUpdate(query);
+            System.out.println("Student updated successfully!");
         }
         catch (Exception e){
             System.out.println(e);
